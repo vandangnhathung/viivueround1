@@ -1,0 +1,163 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: "Be Vietnam Pro", sans-serif !important;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: #353455;
+}
+
+/* variables */
+:root {
+  --background-gradient: linear-gradient(
+    63.23deg,
+    #204ea5 -29.6%,
+    #eb4969 101.75%
+  );
+  --box-shadow: 3px 10px 25px rgba(43, 13, 19, 0.3);
+}
+
+/* ------------- */
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 111px 141px 88px 178px;
+  position: relative;
+}
+
+/* TYPOGRAPHY */
+.heading {
+  font-size: 48px;
+  line-height: 1.667;
+  font-weight: 700;
+  max-width: 474px;
+  letter-spacing: -2px;
+}
+.heading__third {
+  font-size: 24px;
+  line-height: 1.416;
+  font-weight: 700;
+  color: #004eab;
+  max-width: 414px;
+  letter-spacing: -0.8px;
+}
+
+.wrap__li {
+  list-style: none;
+  max-width: 414px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.625;
+  margin-bottom: 24px;
+  letter-spacing: -0.2px;
+}
+
+.text__align {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-top: 10px;
+}
+.text__align::before {
+  content: "";
+  width: 7.24px;
+  height: 7.24px;
+  display: inline-block;
+  background: #eb4969;
+  border: 1px solid red;
+  border-radius: 4px 4px 0 4px;
+  rotate: -45deg;
+}
+/* ------------- */
+/* circles */
+.circle {
+  position: absolute;
+  border-radius: 100rem;
+  background: var(--background-gradient);
+  box-shadow: var(--box-shadow);
+  animation: circle 2.5s infinite ease-in-out;
+}
+
+.circle__text {
+  position: absolute;
+  color: #fff;
+}
+/* ------------- */
+
+/* Others */
+.wrap__heading-parent {
+  display: flex;
+  margin: 176px 0 24px 70px;
+}
+
+.wrap__heading-third {
+  margin-left: auto;
+  display: inline-block;
+}
+/* ------------- */
+/* Responsive */
+@media screen and (max-width: 1350px) {
+  .wrap {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .heading {
+    font-size: 46px;
+  }
+  .wrap__heading-parent {
+    margin: 0;
+  }
+  .wrap__heading-third {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  .circle {
+    position: initial;
+  }
+  .text {
+    text-align: left;
+  }
+}
+
+/* ------------- */
+/* Animation */
+@keyframes circle {
+  50% {
+    transform: translate(0, 20px);
+  }
+}
+/* ------------- */
